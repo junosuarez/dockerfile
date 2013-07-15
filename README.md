@@ -2,11 +2,31 @@
 work with Dockerfiles from Docker.io
 
 ## usage
-
+```js
     var dockerfile = require('dockerfile')
 
+    dockerfile()
+          .name('test')
+          .rem('a test Dockerfile')
+          .version('0.5.3')
+          .dockerVersion('0.4.8')
+          .maintainer('jden <jason@denizac.org>')
+          .from('ubuntu:12.10')
+          .section('install stuff')
+            .run('apt-get install curl')
+          .section('add some stuff')
+            .add('/src', '/dest')
+          .section('runtime')
+            .env({
+              mode: 'PROD',
+              needs_nachos: 'true'
+            })
+            .entrypoint('/bin/node ./index.js')
+          .export()
+```
 ## api
 
+Implements the [Docker Builder](http://docs.docker.io/en/latest/use/builder/) interface.
 
 ## installation
 
@@ -20,6 +40,9 @@ From package root:
     $ npm install
     $ npm test
 
+## todo
+
+- add parse support / JSON ast format
 
 ## contributors
 
@@ -28,4 +51,4 @@ From package root:
 
 ## license
 
-MIT. (c) 2013 jden <jason@denizac.org>. See LICENSE.md
+MIT. (c) 2013 AgileMD. See LICENSE.md

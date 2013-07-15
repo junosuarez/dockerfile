@@ -1,9 +1,14 @@
 {
   "name": "dockerfile",
-  "author": "jden <jason@denizac.org>",
+  "contributors": ["jden <jason@denizac.org>"],
+  "author": "AgileMD <hello@agilediagnosis.com",
   "version": "0.1.0",
   "description": "work with Dockerfiles from Docker.io",
-  "keywords": ["Docker", "Docker.io", "Dockerfile"],
+  "keywords": [
+    "Docker",
+    "Docker.io",
+    "Dockerfile"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
@@ -13,6 +18,8 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "chai": "~1.6.0",
-    "mocha": "~1.9.0"
+    "mocha": "~1.9.0",
+    "chai-interface": "~1.1.0",
+    "heredoc": "~1.1.0"
   }
 }
