@@ -13,7 +13,7 @@
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
   },
-  "repository": "git@github.com:jden/dockerfile.git",
+  "repository": "git@github.com:agilemd/dockerfile.git",
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
