@@ -31,7 +31,7 @@ methods.from = function (image) {
 }
 
 methods.maintainer = function (name) {
-  this.file.push(['from', name])
+  this.file.push(['maintainer', name])
   return this
 }
 
